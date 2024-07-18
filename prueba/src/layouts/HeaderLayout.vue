@@ -54,7 +54,7 @@ import {ref} from 'vue'
         { title: 'Incio', route:"/" },
         { title: 'Page Adios', route:"/adios"},
         { title: 'Tablas', route:"/tablas" },
-        { title: 'Click Me 2', route:"/"},
+        { title: 'Tablas2', route:"/tablas2"},
       ])
 
 </script>
