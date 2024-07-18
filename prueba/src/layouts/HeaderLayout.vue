@@ -55,6 +55,7 @@ import {ref} from 'vue'
         { title: 'Page Adios', route:"/adios"},
         { title: 'Tablas', route:"/tablas" },
         { title: 'Tablas2', route:"/tablas2"},
+        { title: 'graficos', route:"/grafico"},
       ])
 
 </script>
