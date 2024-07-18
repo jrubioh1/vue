@@ -53,7 +53,7 @@ import {ref} from 'vue'
       let items= reactive([
         { title: 'Incio', route:"/" },
         { title: 'Page Adios', route:"/adios"},
-        { title: 'Click Me', route:"/" },
+        { title: 'Tablas', route:"/tablas" },
         { title: 'Click Me 2', route:"/"},
       ])
 
