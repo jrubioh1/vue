@@ -2,29 +2,61 @@
 
     <v-card
     color="transparent"
-    class="pa-4"
+    class="pa-4 "
     flat
   >
-    <v-toolbar :elevation="8" 
-    >
-       <v-app-bar-nav-icon></v-app-bar-nav-icon>
-        <v-toolbar-title>Web Interna</v-toolbar-title>
+    <div>
 
+    </div>
+
+    <div>
+      
+    </div>
+    <v-toolbar :elevation="8" 
+     class="rounded"
+      scroll-behavior="hide" 
+      scroll-threshold="0"
+    >
+      <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn icon="mdi-menu" v-bind="props"></v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="(item, i) in items"
+                :key="i"
+              >
+                <router-link :to="item.route">
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </router-link>
+          
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+
+      
+      <v-toolbar-title>Web Interna</v-toolbar-title>
+ 
      
     </v-toolbar>
+    
   </v-card>
 
 </template>
 
-<script lang="ts" setup>
-
+<script setup>
+import { reactive } from 'vue';
 import {ref} from 'vue'
- let menuVisible= ref(false)
-    let menuItems= ref( [
-      { text: 'Item 1' },
-      { text: 'Item 2' },
-      { text: 'Item 3' },
-    ])
+ 
+      let items= reactive([
+        { title: 'Incio', route:"/" },
+        { title: 'Page Adios', route:"/adios"},
+        { title: 'Click Me', route:"/" },
+        { title: 'Click Me 2', route:"/"},
+      ])
+
 </script>
 
 <style scoped>
