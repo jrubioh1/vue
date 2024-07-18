@@ -1,28 +1,30 @@
 <template>
-    
-  <v-layout class="rounded rounded-md">
-    <v-app-bar title="Application bar"></v-app-bar>
 
-    <v-navigation-drawer>
-      <v-list>
-        <v-list-item title="Navigation drawer"></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+    <v-card
+    color="transparent"
+    class="pa-4"
+    flat
+  >
+    <v-toolbar :elevation="8" 
+    >
+       <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-toolbar-title>Web Interna</v-toolbar-title>
 
-    <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      Main Content
-    </v-main>
-  </v-layout>
-
-    <router-link to="/">Hola</router-link>
-    <router-link to="/adios">Adios</router-link>
-
-
-  
+     
+    </v-toolbar>
+  </v-card>
 
 </template>
 
 <script lang="ts" setup>
+
+import {ref} from 'vue'
+ let menuVisible= ref(false)
+    let menuItems= ref( [
+      { text: 'Item 1' },
+      { text: 'Item 2' },
+      { text: 'Item 3' },
+    ])
 </script>
 
 <style scoped>
