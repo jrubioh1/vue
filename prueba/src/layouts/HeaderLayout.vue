@@ -26,6 +26,8 @@
               <v-list-item
                 v-for="(item, i) in items"
                 :key="i"
+
+                
               >
                 <router-link :to="item.route">
                         <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -52,7 +54,7 @@ import {ref} from 'vue'
  
       let items= reactive([
         { title: 'Incio', route:"/" },
-        { title: 'Page Adios', route:"/adios"},
+        { title: 'Page Adios/ejemplos', route:"/adios"},
         { title: 'Tablas', route:"/tablas" },
         { title: 'Tablas2', route:"/tablas2"},
         { title: 'graficos', route:"/grafico"},
