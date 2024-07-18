@@ -8,8 +8,9 @@
     v-model="emailtemp"
 ></v-text-field>
 <v-btn @click="changeEmail">cambiar email</v-btn>
+<br>
 
-<hr>
+<br>
 {{  emailPrecreate}} ----- precreate
 
 <br>
@@ -19,9 +20,21 @@
 <br>
 {{ email }}  ---actual
 <hr>
+<br>
 
 historialwatched----
 {{ historial }}
+<br>
+<hr>
+
+<br>
+<br>
+contador= {{ contador }}
+<br>
+<br>
+el valor computado de multiplicar el numero del contador por 2 es:
+
+{{ resultadoComputado }}
 
 </template>
 
@@ -33,6 +46,7 @@ let emailPremount=ref("-")
 let emailtemp=ref("temp")
 let mounted= ref('-')
 let historial=ref([])
+let contador= ref(0)
 
 let email=ref("")
 emailPrecreate.value=email.value
@@ -41,9 +55,6 @@ emailPrecreate.value=email.value
 onBeforeMount(()=>{
     email.value="jr@emaul"
     emailPremount.value=email.value
-   
-    
-    
 })
 
 onMounted(()=>{
@@ -52,7 +63,7 @@ onMounted(()=>{
     emailtemp.value=email.value
 })
 
- console.log(`el valor de el email despues de montar de montar es: ${email.value}`);
+console.log(`el valor de el email despues de montar de montar es: ${email.value}`);
 
 
 watch(email,()=>{
@@ -61,7 +72,10 @@ watch(email,()=>{
 
 function changeEmail(){
     email.value= emailtemp.value
+    contador.value++
 }
+
+const resultadoComputado= computed(()=> {return contador.value *2} )
  
 
 
