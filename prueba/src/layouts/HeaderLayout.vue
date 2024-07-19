@@ -1,66 +1,63 @@
 <template>
+  <v-header class="mt-4
+   mx-4" >
 
-    <v-card
-    color="transparent"
-    class="pa-4 "
-    flat
-  >
-    <div>
-
+    <div class="d-flex justify-center align-center">
+      
+         <v-img height="200"  max-width="100"
+          src="../assets/logo.png"></v-img> 
+       <v-text class="text-h1" >Vuetify</v-text>
     </div>
 
-    <div>
+
+    <v-toolbar :elevation="0" rounded>
+
+     <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-spacer justify-end>
+        <v-btn text >Inicio</v-btn>
+        <v-btn text>Contacto</v-btn>
+        <v-btn text>Sobre Nosotros</v-btn>
+
+      </v-spacer>
       
-    </div>
-    <v-toolbar :elevation="8" 
-     class="rounded"
-      scroll-behavior="hide" 
-      scroll-threshold="0"
-    >
-      <v-menu>
-            <template v-slot:activator="{ props }">
-              <v-btn icon="mdi-menu" v-bind="props"></v-btn>
-            </template>
-
-            <v-list>
-              <v-list-item
-                v-for="(item, i) in items"
-                :key="i"
-
-                
-              >
-                <router-link :to="item.route">
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </router-link>
-          
-              </v-list-item>
-            </v-list>
-          </v-menu>
-
-
       
-      <v-toolbar-title>Web Interna</v-toolbar-title>
- 
      
     </v-toolbar>
-    
-  </v-card>
 
+    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-list>
+    <v-list-item @click="changeDrawer">
+         <v-list-item-title v-for="item in items" key="title" :to="item.route">{{ item.title }}</v-list-item-title>
+    </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+
+
+
+  </v-header>
 </template>
-
 <script setup>
-import { reactive } from 'vue';
-import {ref} from 'vue'
- 
-      let items= reactive([
-        { title: 'Incio', route:"/" },
-        { title: 'Page Adios/ejemplos compositedss', route:"/adios"},
-        { title: 'Tablas', route:"/tablas" },
-        { title: 'Tablas2', route:"/tablas2"},
-        { title: 'graficos', route:"/grafico"},
-      ])
+import { ref} from 'vue'
+import router from '@/router/index'
+
+let drawer=ref(false)
+const items = ref([
+  { title: "Inicio", route: "/" }
+
+]);
+const currentPage=ref('')
+
+
+function changeDrawer(){
+  console.log("hola")
+  drawer.value=!drawer.value;
+   console.log(drawer.value);
+}
+
+
 
 </script>
 
 <style scoped>
+
 </style>

@@ -1,10 +1,15 @@
 <template>
   <v-app>
    <HeaderLayout/>
-    <v-main class="pa-4 ">
-      <router-view />
-    </v-main>
-   <FooterLayout/>
+
+       <v-parallax class="pa-8">
+        
+        <v-main>
+          <router-view />
+          </v-main>
+
+      </v-parallax>
+      <FooterLayout/>
   </v-app>
 </template>
 
