@@ -3,7 +3,7 @@
    mx-4">
 
     <v-container class="d-flex justify-center align-center">
-      <v-row align="center" class="justify-center" no-gutters max-height="250"> 
+      <v-row align="center" class="justify-center" no-gutters max-height="250">
         <v-col class="ma-2" align="center" cols="1">
           <v-img height="200" max-width="100" src="../assets/logo.png" />
         </v-col>
@@ -20,26 +20,38 @@
     </div>
 
 
-    <v-toolbar :elevation="0" rounded>
+    <v-toolbar :elevation="4" rounded>
 
       <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-spacer justify-end>
-        <v-btn text>Inicio</v-btn>
-        <v-btn text>Contacto</v-btn>
-        <v-btn text>Sobre Nosotros</v-btn>
 
-      </v-spacer>
+      <v-btn rounded text="Inicio" to="/"/>
+      <v-btn rounded text="Sobre Nosotros"/>
+      <v-btn rounded text="Contacto"/>
+    
+
+      <v-spacer></v-spacer>
+      <v-btn aria-label="Login" icon="mdi-login" to="/login"></v-btn>
 
 
 
     </v-toolbar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list>
-        <v-list-item @click="changeDrawer">
-          <v-list-item-title v-for="item in items" key="title" :to="item.route">{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
+    <v-navigation-drawer width="250" v-model="drawer" class="bg-grey-lighten-3" absolute temporary>
+
+      <v-container grid-list-xs>
+        <v-row v-for="item in items" key="title" >
+          <v-col align="center">
+            <v-btn @click="changeDrawer" :to="item.route" rounded class="w-75 mx-2 ma-1 mt-2" variant="tonal">
+              {{ item.title }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+
+
+
+
+
     </v-navigation-drawer>
 
   </v-header>
@@ -50,6 +62,8 @@ import router from '@/router/index'
 
 let drawer = ref(false)
 const items = ref([
+  { title: "Inicio", route: "/" },
+  { title: "Inicio", route: "/" },
   { title: "Inicio", route: "/" }
 
 ]);

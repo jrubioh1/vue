@@ -19,7 +19,7 @@
                     </v-expand-transition>
 
                     <v-sheet v-if="isVisible" class="mt-15" max-width="200">
-                        <v-progress-linear rounded color="blue-lighten-3" indeterminate></v-progress-linear>
+                        <v-progress-linear rounded color="grey" indeterminate></v-progress-linear>
                     </v-sheet>
                 </v-col>
             </v-row>

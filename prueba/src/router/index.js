@@ -1,10 +1,12 @@
 
 import { createRouter, createWebHistory } from 'vue-router'
 import IndexView from '@/pages/IndexView.vue'
+import LoginView from '@/pages/LoginView.vue'
 
 
 const routes=[
-  {path:'/', component: IndexView, name: "index"},
+  {path:'/', component: IndexView, name: "inicio"},
+  {path:'/login', component: LoginView, name: "login"},
 
 
 ]
