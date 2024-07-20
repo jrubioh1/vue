@@ -22,8 +22,18 @@
           magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
 
-        <v-btn class="ma-4" text="Learn more"/>
+
+        <v-bottom-sheet inset>
+          <template v-slot:activator="{ props }">
+            <v-btn class="ma-4" v-bind="props" text="Learn more"></v-btn>
+          </template>
+
+          <v-card title="Bottom Sheet"
+            text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, eos? Nulla aspernatur odio rem, culpa voluptatibus eius debitis dolorem perspiciatis asperiores sed consectetur praesentium! Delectus et iure maxime eaque exercitationem!"></v-card>
+        </v-bottom-sheet>
+
        
+
 
       </v-col>
     </v-row>
@@ -50,6 +60,8 @@
         <button class="btn btn-secondary">See all features</button>
       </v-col>
     </v-row>
+
+    <v-divider class="border-opacity-100 my-10" color="black" inset></v-divider>
     <v-row align="center">
       <v-col align="center">
         <h2 class="text-2xl font-bold mb-4">Our team</h2>
@@ -93,7 +105,7 @@
 
   </v-container>
 
-  <carousel-componet/>
+  <carousel-componet />
 </template>
 
 <script setup>
