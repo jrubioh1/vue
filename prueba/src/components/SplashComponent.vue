@@ -15,7 +15,8 @@
 
                     <v-expand-transition>
                         <v-sheet v-if="isVisible" class="pb-2 mb-2" max-width="100" color="transparent">
-                            <v-img src="@/assets/logo.png" class="" alt="Logo" max-height="600" max-width="100" />
+                            <v-img src="@/assets/logo_icae.png" class="" alt="Logo" max-height="600" max-width="100" />
+                            <v-img src="@/assets/logo_gc.jpg" class="" alt="Logo" max-height="600" max-width="100" />
                         </v-sheet>
                     </v-expand-transition>
 
