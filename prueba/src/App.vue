@@ -1,7 +1,9 @@
 <template>
+  
     <transition name="fade">
       <SplashComponent v-show="showSplash" />
     </transition>
+
     <transition name="fade">
         <v-app v-show="!showSplash">
           <HeaderLayout />

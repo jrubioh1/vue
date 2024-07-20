@@ -1,37 +1,45 @@
 <template>
     <v-app>
-
-        <v-container class=" mb-6 fill-height">
-            <v-row align="center" max-height="150" no-gutters>
-                <v-col align="center">
+        <v-container class=" mb-20">
+            <v-row align="center" style="height: 50vh;">
+                <v-col cols="20" align="center">
                     <v-expand-transition>
-                        <v-sheet v-if="isVisile" class="pa-2 ma-2" max-width="100">
+                        <span  v-if="isVisible" class="text-h1">Bienvenido a Vuetify</span>
+                    </v-expand-transition>
+                </v-col>
+            </v-row>
+
+            <v-row align="center" class="justify-center" max-height="150" no-gutters>
+                <v-col align="center">
+
+                    <v-expand-transition>
+                        <v-sheet v-if="isVisible" class="pb-2 mb-2" max-width="100">
                             <v-img src="@/assets/logo.png" class="" alt="Logo" max-height="600" max-width="100" />
                         </v-sheet>
                     </v-expand-transition>
-                    <v-sheet class="mt-15" max-width="200">
+
+                    <v-sheet v-if="isVisible" class="mt-15" max-width="200">
                         <v-progress-linear rounded color="blue-lighten-3" indeterminate></v-progress-linear>
                     </v-sheet>
                 </v-col>
             </v-row>
         </v-container>
-
-
     </v-app>
 </template>
   
 <script setup>
 
-import { ref , onMounted} from 'vue'
+import { ref, onMounted } from 'vue'
 
 const isVisible = ref(true)
 
-onMounted(()=>{
+onMounted(() => {
     setTimeout(() => {
         isVisible.value = !isVisible.value
-        
-    }, 500)
+
+    }, 2875)
 })
+console.log(isVisible.value)
 
 </script>
 
