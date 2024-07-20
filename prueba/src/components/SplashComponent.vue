@@ -5,7 +5,7 @@
             <v-row align="center" style="height: 50vh;">
                 <v-col cols="20" align="center">
                     <v-expand-transition>
-                        <span  v-if="isVisible" class="text-h1">Bienvenido a Vuetify</span>
+                        <v-sheet v-if="isVisible" class="text-h1">Bienvenido a Vuetify</v-sheet>
                     </v-expand-transition>
                 </v-col>
             </v-row>
