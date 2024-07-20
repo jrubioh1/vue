@@ -14,7 +14,7 @@
 
 </script>
 
-<style>
+<style scoped>
 .container {
     display: flex;
     /* Activa Flexbox */

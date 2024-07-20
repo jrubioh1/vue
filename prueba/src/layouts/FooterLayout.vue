@@ -1,6 +1,7 @@
 <template>
   <v-footer
-    class="bg-grey-lighten-3 text-center d-flex flex-column"
+    class="bg-grey-lighten-3 text-center d-flex flex-column ma-4 "
+    rounded=""
   >
     <div>
       <v-btn
