@@ -1,4 +1,7 @@
 <template>
+  <v-container>
+
+
   <v-footer
     elevation="4"
     class="bg-grey-lighten-3 text-center d-flex flex-column ma-4 "
@@ -24,6 +27,7 @@
       {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
     </div>
   </v-footer>
+</v-container>
 </template>
 
 <script setup>

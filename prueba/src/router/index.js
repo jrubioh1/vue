@@ -5,8 +5,8 @@ import LoginView from '@/pages/LoginView.vue'
 
 
 const routes=[
-  {path:'/', component: IndexView, name: "inicio"},
-  {path:'/login', component: LoginView, name: "login"},
+  {path:'/', component: IndexView, name: "Inicio"},
+  {path:'/login', component: LoginView, name: "Login"},
 
 
 ]
