@@ -1,10 +1,13 @@
 <template>
+
   <section class="py-12">
     <div class="container mx-auto p-4">
       <h1 class="text-3xl font-bold mb-4">Welcome to our website!</h1>
-      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum
+        magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       <img src="https://via.placeholder.com/800x400" alt="Imagen de relleno" class="mx-auto mb-4">
-      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum
+        magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       <button class="btn btn-primary">Learn more</button>
     </div>
   </section>
@@ -46,5 +49,5 @@
 </template>
 
 <script setup>
-  //
+//
 </script>
